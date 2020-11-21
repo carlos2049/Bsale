@@ -1,10 +1,15 @@
 import models from '../models';
 const { Product } = models;
 
-export const products = async (req, res) => {
+export const getProducts = async (req, res) => {
+  
+  const { categoryId } = req.params;
 
-  console.log('holaa')
-  const productos = await Product.findAll()
+  const productos = await Product.findAll({
+    where: {
+      category: categoryId
+    }
+  });
 
-  res.json(productos)
+  res.json(productos);
 }
