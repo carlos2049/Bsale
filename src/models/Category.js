@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 
-export default class Catergory extends Sequelize.Model {
+export default class Category extends Sequelize.Model {
   static init(sequelize, DataTypes) {
     return super.init({
       name: DataTypes.STRING,
