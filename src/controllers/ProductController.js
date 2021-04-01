@@ -19,8 +19,6 @@ export const getProducts = async (req, res) => {
       object.url_image = addUrl.url_image;
       return object;
     });
-    console.log(fixProduct);
-    // const nuevo = productos.url_image === null ? '' : productos.url;
 
     res.json(fixProduct);
   } catch (error) {
