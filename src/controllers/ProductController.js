@@ -19,7 +19,7 @@ export const getProducts = async (req, res) => {
       object.url_image = addUrl.url_image;
       return object;
     });
-
+    console.log('jiii');
     res.json(fixProduct);
   } catch (error) {
     console.log(error);
